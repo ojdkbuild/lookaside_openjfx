@@ -399,7 +399,7 @@ ext.DO_JCOV = Boolean.parseBoolean(JCOV)
 if (IS_MAC) {
     defineProperty("NUM_COMPILE_THREADS", "1")
 } else {
-    defineProperty("NUM_COMPILE_THREADS", "${Runtime.runtime.availableProcessors()}")
+    defineProperty("NUM_COMPILE_THREADS", "1")
 }
 
 //
@@ -2146,7 +2146,7 @@ project(":media") {
         classpath = sourceSets.main.output;
     }
 
-    project.ext.makeJobsFlag = IS_WINDOWS && IS_DEBUG_NATIVE ? "-j1" : "-j5";
+    project.ext.makeJobsFlag = IS_WINDOWS && IS_DEBUG_NATIVE ? "-j1" : "-j1";
     project.ext.buildType = IS_DEBUG_NATIVE ? "Debug" : "Release";
 
     def nativeSrcDir = file("${projectDir}/src/main/native")
