@@ -79,11 +79,6 @@ setupTools("windows_tools",
         defineProperty("WINDOWS_VS_LIBPATH", properties, System.getenv("LIBPATH"))
         def parfaitPath = IS_COMPILE_PARFAIT ? System.getenv().get("PARFAIT_PATH") + ";" : "";
         defineProperty("WINDOWS_VS_PATH", properties, parfaitPath + "$WINDOWS_VS_DEVENVDIR;" +
-                "$WINDOWS_VS_VSINSTALLDIR/VC/BIN;" +
-                "$WINDOWS_VS_VSINSTALLDIR/Common7/Tools;" +
-                "$WINDOWS_VS_VCINSTALLDIR/VCPackages;" +
-                "$WINDOWS_SDK_DIR/bin/NETFX 4.0 Tools;" +
-                "$WINDOWS_SDK_DIR/bin;" +
                 System.getenv("PATH"))
     }
 )
